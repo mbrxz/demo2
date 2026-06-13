@@ -20,7 +20,7 @@ export default function Hero() {
       {/* ── Mobile: photo at top ─────────────────────────────── */}
       <div
         className="lg:hidden relative w-full overflow-hidden"
-        style={{ height: "min(72vw, 460px)", marginTop: "60px" }}
+        style={{ height: "min(85vw, 420px)", marginTop: "60px" }}
       >
         <Image
           src="/photo make.png"
@@ -32,7 +32,8 @@ export default function Hero() {
         <div
           className="absolute inset-0 pointer-events-none"
           style={{
-            background: "linear-gradient(to bottom, transparent 45%, #FAF8F5 100%)",
+            background:
+              "linear-gradient(to bottom, rgba(250,248,245,0.08) 0%, transparent 20%, transparent 50%, rgba(250,248,245,0.45) 75%, #FAF8F5 100%)",
           }}
         />
       </div>
@@ -104,7 +105,7 @@ export default function Hero() {
 
           {/* Studio eyebrow */}
           <motion.div
-            className="flex items-center gap-3 mb-10"
+            className="flex items-center gap-3 mb-6 sm:mb-10"
             custom={0}
             initial="hidden"
             animate="visible"
@@ -118,10 +119,12 @@ export default function Hero() {
 
           {/* Main heading — primary visual element */}
           <motion.h1
-            className="font-light text-[#2C2C2C] leading-[0.9] mb-8"
+            className="font-light text-[#2C2C2C] leading-[0.92] mb-8"
             style={{
               fontFamily: "var(--font-cormorant), Georgia, serif",
-              fontSize: "clamp(64px, 6.4vw, 92px)",
+              fontSize: "clamp(38px, 9.5vw, 92px)",
+              wordBreak: "break-word",
+              overflowWrap: "break-word",
             }}
             custom={1}
             initial="hidden"
